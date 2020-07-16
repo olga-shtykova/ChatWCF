@@ -1,0 +1,24 @@
+﻿<Window x:Class="ChatClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded" Closing="Window_Closing" Background="#FF1DA8CE" Foreground="Black">
+    <Grid Margin="0,0,0,0" HorizontalAlignment="Left" Width="525">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="201*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="225*"/>
+            <ColumnDefinition Width="14*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="textBoxUserName" HorizontalAlignment="Right" Height="29" Margin="0,10,5.334,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Background="#FF31F7D3" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="14" TextChanged="textBoxUserName_TextChanged" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnConDiscon" Click="buttonConnect_Click" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="147" Height="29" Margin="10,10,0,0" Background="#FF31F7D3" FontWeight="Bold" FontSize="14"/>
+        <ListBox x:Name="listBoxChat" HorizontalAlignment="Left" Height="170" Margin="10,44,0,0" VerticalAlignment="Top" Width="496" Grid.ColumnSpan="4" Background="#FFCBEFEA"/>
+        <TextBox x:Name="textBoxMessage" Height="92" Margin="10,219,3.334,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="4" KeyDown="textBoxMessage_KeyDown"/>
+        <Label x:Name="label" Content="Type your Name" Margin="0,10,10.667,0" VerticalAlignment="Top" Grid.ColumnSpan="3" HorizontalAlignment="Right" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
